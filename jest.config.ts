@@ -5,9 +5,10 @@ const createJestConfig = nextJest({ dir: "./" });
 
 const customJestConfig: Config = {
   coverageProvider: "v8",
+  collectCoverageFrom: ["components/**/*.{ts, tsx}", "app/**/*.{ts, tsx}"],
   coverageReporters: ["lcov"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jest-environment-jsdom",
 };
 
-module.exports = createJestConfig(customJestConfig);
+export default createJestConfig(customJestConfig);
