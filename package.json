@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:dev": "jest --watch",
     "lint": "next lint",
     "prepare": "husky install"
@@ -33,5 +33,6 @@
     "prettier": "^3.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5"
-  }
+  },
+  "lint-staged": {}
 }

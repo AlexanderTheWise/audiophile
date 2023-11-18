@@ -28,9 +28,9 @@ if git diff --cached --name-only | grep -E $FILES_PATTERN | xargs grep --with-fi
     exit 1
 fi
 
+npx lint-staged --config ./.lintstagedrc.js
+
 echo -e "${green}No forbidden console references or 'debugger' statements found!${no_color}\n"
-
-npx lint-staged
-
 echo -e "${green}Git pre-commit hook was successful!${no_color}\n"
+
 exit 0
