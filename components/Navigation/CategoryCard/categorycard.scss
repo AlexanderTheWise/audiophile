@@ -1,0 +1,31 @@
+.category-card {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding: 1.875rem;
+  height: clamp(10.313rem, 9.432rem + 3.756vw, 12.813rem);
+  background-color: var(--bg-product);
+  text-align: center;
+  border-radius: var(--common-radius);
+
+  &__image {
+    height: auto;
+    width: clamp(9.375rem, 8.275rem + 4.695vw, 12.5rem);
+    position: absolute;
+    transform: translateY(-35%);
+  }
+
+  &__title {
+    font-size: clamp(0.938rem, 0.871rem + 0.282vw, 1.125rem);
+  }
+
+  &__link {
+    align-items: flex-end;
+
+    &-content {
+      align-items: center;
+      gap: 0.84rem;
+    }
+  }
+}
