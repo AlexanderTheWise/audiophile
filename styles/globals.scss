@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+
+:root {
+  --black-pale: rgba(0, 0, 0, 0.5);
+  --white-pale: rgba(255, 255, 255, 0.5);
+
+  --corp-col: #d87d4a;
+  --corp-col-pale: #fbaf85;
+
+  --bg-primary-col: #fafafa;
+  --bg-header-footer-col: #000;
+  --bg-product: #f1f1f1;
+
+  --input-border-default-col: #cfcfcf;
+  --input-border-error-col: #cd2c2c;
+
+  --common-radius: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin-block-end: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.93rem;
+  font-weight: 500;
+  line-height: 1.66em;
+  text-rendering: optimizeSpeed;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  display: block;
+}
+
+input,
+button {
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+@import "./button.scss";
+@import "./input.scss";
+@import "./text.scss";
