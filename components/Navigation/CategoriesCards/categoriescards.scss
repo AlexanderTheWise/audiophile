@@ -1,0 +1,10 @@
+.categories-cards {
+  max-width: 68.563rem;
+  display: grid;
+  column-gap: clamp(0.625rem, 0.185rem + 1.878vw, 1.875rem);
+  row-gap: 4.25rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(100%/ (3 + 1) + 0.1%, (500px - 100vw) * 1000, 100%), 1fr)
+  );
+}
