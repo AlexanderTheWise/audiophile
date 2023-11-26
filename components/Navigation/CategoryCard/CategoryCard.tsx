@@ -23,7 +23,7 @@ const CategoryCard = ({
         height="150"
       />
       <h3 className="category-card__title text--h">{name}</h3>
-      <CategoryLink />
+      <CategoryLink href="#" label={name} />
     </div>
   );
 };
