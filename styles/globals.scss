@@ -56,15 +56,58 @@ img {
   display: block;
 }
 
+small,
+input,
+button {
+  font: inherit;
+}
+
 input,
 button {
   background-color: transparent;
-  font: inherit;
   cursor: pointer;
 }
 
 .flex {
   display: flex;
+
+  &--col {
+    @extend .flex;
+    flex-direction: column;
+  }
+
+  &-items-center {
+    align-items: center;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-gap-1 {
+    gap: 1rem;
+  }
+
+  &-content-between {
+    justify-content: space-between;
+  }
+}
+
+.white-to-corp-col {
+  color: white;
+  transition: color 0.5s;
+  path {
+    transition: fill 0.5s;
+    fill: white;
+  }
+
+  &:hover {
+    color: var(--corp-col);
+
+    path {
+      fill: var(--corp-col);
+    }
+  }
 }
 
 @import "./button.scss";
