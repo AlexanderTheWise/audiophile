@@ -1,3 +1,21 @@
+.text--n {
+  --common-col-opac: 0.5;
+
+  &--white {
+    @extend .text--n;
+    color: rgba(255, 255, 255, var(--common-col-opac));
+  }
+
+  &--black {
+    @extend .text--n;
+    color: rgba(0, 0, 0, var(--common-col-opac));
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
 .text--h {
   font-weight: bold;
   text-transform: uppercase;
