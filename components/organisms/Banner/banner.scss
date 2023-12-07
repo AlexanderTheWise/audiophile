@@ -1,0 +1,38 @@
+@use "sass:color";
+
+.banner {
+  --border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+  height: 5.625rem;
+  padding: 0 var(--main-horizontal-space);
+  background-color: #191919;
+  border-bottom: var(--border-bottom);
+
+  &__content {
+    height: 100%;
+    flex: 1;
+  }
+
+  &--absolute {
+    @extend .banner;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @media (width <= 768px) {
+    &__pages-links {
+      display: none;
+    }
+  }
+
+  @media (width >= 768px) {
+    border-bottom: none;
+
+    &__content {
+      border-bottom: var(--border-bottom);
+    }
+  }
+}
