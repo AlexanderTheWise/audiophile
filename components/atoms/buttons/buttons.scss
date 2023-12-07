@@ -1,0 +1,15 @@
+.burger {
+  width: 1rem;
+  gap: 3px;
+  transition: gap, 0.3s;
+
+  &__bar {
+    background-color: var(--white);
+    width: 100%;
+    height: 3px;
+  }
+
+  &:hover {
+    gap: 5px;
+  }
+}
