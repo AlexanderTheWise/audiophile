@@ -1,0 +1,14 @@
+.to-brand {
+  transition: color, 0.3s;
+
+  path {
+    transition: fill, 0.3s;
+  }
+
+  &:hover {
+    color: var(--color-brand);
+    path {
+      fill: var(--color-brand);
+    }
+  }
+}

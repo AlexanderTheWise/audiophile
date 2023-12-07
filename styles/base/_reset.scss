@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font:
+    500 0.93rem/1.66em "Manrope",
+    sans-serif;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+
+input,
+button,
+small {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
