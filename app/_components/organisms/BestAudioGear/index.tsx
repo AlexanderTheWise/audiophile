@@ -3,7 +3,7 @@ import {
   H2,
   ParBTrans,
   ResponsiveCenterToLeft,
-} from "../../atoms";
+} from "@/app/_components/atoms";
 import { CommonProps, ResponsiveImage } from "../../types";
 import "./best-audio-gear.scss";
 

@@ -5,6 +5,10 @@
   background: url("/images/home/mobile/image-hero.jpg") center / cover no-repeat;
 
   &__content {
+    > h1 {
+      max-width: min-content;
+    }
+
     > p {
       max-width: 21.8rem;
     }
