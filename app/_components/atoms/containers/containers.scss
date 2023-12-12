@@ -24,27 +24,23 @@
   }
 }
 
-@mixin mainPT($padding-top) {
-  padding-left: var(--main-horizontal-space);
-  padding-right: var(--main-horizontal-space);
-  padding-top: $padding-top;
-  padding-bottom: clamp(7.5rem, 4.643rem + 5.952vw, 10rem);
-}
-
-.main {
-  row-gap: clamp(7.5rem, 4.643rem + 5.952vw, 10rem);
+.wrapper {
+  $common-spacing: clamp(7.5rem, 4.643rem + 5.952vw, 10rem);
+  padding: 0 var(--main-horizontal-space) $common-spacing;
+  row-gap: $common-spacing;
 
   &--home {
-    @extend .main;
-    @include mainPT(clamp(2.5rem, 0.739rem + 7.512vw, 7.5rem));
+    padding-top: clamp(2.5rem, 0.739rem + 7.512vw, 7.5rem);
+    row-gap: $common-spacing;
   }
 
   &--category {
-    @include mainPT(clamp(4rem, 1.887rem + 9.014vw, 10rem));
+    padding-top: clamp(4rem, 1.887rem + 9.014vw, 10rem) $common-spacing;
+    row-gap: $common-spacing;
   }
 
   &--product {
-    @include mainPT(clamp(1rem, -0.386rem + 5.915vw, 4.938rem));
+    padding-top: clamp(1rem, -0.386rem + 5.915vw, 4.938rem);
   }
 }
 

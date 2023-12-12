@@ -2,25 +2,32 @@ import { CommonContainerProps, ResponsiveImage } from "@/app/_components/types";
 import Image from "next/image";
 import "./containers.scss";
 
-export const MainHome = ({
+export const WrapperMain = ({
   children,
   className = "",
 }: CommonContainerProps) => (
-  <main className={`${className} main--home flex-col`}>{children}</main>
+  <div className={`${className} wrapper flex-col`}>{children}</div>
 );
 
-export const MainCategory = ({
+export const WrapperHome = ({
   children,
   className = "",
 }: CommonContainerProps) => (
-  <main className={`${className} main--category`}>{children}</main>
+  <div className={`${className} wrapper--home flex-col`}>{children}</div>
 );
 
-export const MainProduct = ({
+export const WrapperCategory = ({
   children,
   className = "",
 }: CommonContainerProps) => (
-  <main className={`${className} main--product`}>{children}</main>
+  <div className={`${className} wrapper--category flex-col`}>{children}</div>
+);
+
+export const WrapperProduct = ({
+  children,
+  className = "",
+}: CommonContainerProps) => (
+  <main className={`${className} wrapper--product`}>{children}</main>
 );
 
 export const ResponsiveCenterToLeft = ({
