@@ -1,0 +1,73 @@
+@mixin heading($size, $height, $spacing, $weight: bold) {
+  text-transform: uppercase;
+  font:
+    #{$weight} #{$size}/#{$height} "Manrope",
+    sans-serif;
+  letter-spacing: $spacing;
+}
+
+.text {
+  &--h1 {
+    @include heading(clamp(2.25rem, 1.057rem + 5.089vw, 3.5rem), 1.07, 0.035em);
+  }
+
+  &--h2 {
+    @include heading(
+      clamp(1.75rem, 1.4859rem + 1.1268vw, 2.5rem),
+      1.1,
+      0.035em
+    );
+  }
+
+  &--h3 {
+    @include heading(
+      clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem),
+      2.1rem,
+      0.035em
+    );
+  }
+
+  &--h4 {
+    @include heading(1.75rem, 1.3, 0.125rem);
+  }
+
+  &--h5 {
+    @include heading(1.125rem, 1.3, 0.08rem);
+  }
+
+  &--over {
+    @include heading(0.87rem, 1.35, 0.71em, 400);
+  }
+
+  &--sub {
+    @include heading(0.813rem, 1.92, 0.07em);
+  }
+
+  &--category {
+    @include heading(
+      clamp(0.938rem, 0.871rem + 0.282vw, 1.125rem),
+      normal,
+      1.286px
+    );
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--white {
+    color: var(--white);
+  }
+
+  &--brand {
+    color: var(--color-brand);
+  }
+
+  &--white-transparent {
+    color: var(--white-transparent);
+  }
+
+  &--black-transparent {
+    color: var(--black-transparent);
+  }
+}

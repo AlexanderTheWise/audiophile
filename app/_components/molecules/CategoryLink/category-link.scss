@@ -1,0 +1,19 @@
+.category-link {
+  padding-top: clamp(3.25rem, 1.821rem + 2.976vw, 4.5rem);
+
+  &__grey-box {
+    padding-bottom: 1.875rem;
+    height: clamp(10.313rem, 7.527rem + 5.804vw, 12.75rem);
+  }
+
+  &__image {
+    transform: translateY(20%);
+
+    @media (width >= 768px) {
+      transform: translateY(15%);
+      width: 70%;
+      max-width: 12.5rem;
+      heigth: auto;
+    }
+  }
+}
