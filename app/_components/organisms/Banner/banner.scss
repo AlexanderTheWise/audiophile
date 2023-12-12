@@ -13,15 +13,6 @@
     flex: 1;
   }
 
-  &--absolute {
-    @extend .banner;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
   @media (width <= 768px) {
     &__pages-links {
       display: none;

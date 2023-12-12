@@ -10,6 +10,11 @@
     padding: 0 clamp(1.5rem, -0.085rem + 6.761vw, 6rem);
   }
 
+  h1,
+  h2 {
+    max-width: min-content;
+  }
+
   p {
     max-width: 21.875rem;
   }

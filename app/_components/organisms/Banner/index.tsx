@@ -5,7 +5,7 @@ import SliderNav from "../SliderNav";
 import "./banner.scss";
 
 const Banner = ({ className = "" }: CommonProps) => (
-  <div className={`banner${className} flex items-center`}>
+  <div className={`${className} banner flex items-center`}>
     <div className="banner__content flex items-center content-space-between">
       <SliderNav />
       <Audiophile />
