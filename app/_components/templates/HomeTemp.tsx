@@ -1,17 +1,13 @@
-import { MainHome } from "../atoms";
+import { WrapperHome } from "../atoms";
 import { CategoriesLinks } from "../molecules";
-import { BestAudioGear, Header, Hero, HomeProducts } from "../organisms";
+import { HomeProducts } from "../organisms";
 
 const Home = () => (
   <>
-    <Header className="--absolute">
-      <Hero />
-    </Header>
-    <MainHome>
+    <WrapperHome>
       <CategoriesLinks />
       <HomeProducts />
-      <BestAudioGear />
-    </MainHome>
+    </WrapperHome>
   </>
 );
 

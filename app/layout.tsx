@@ -1,4 +1,4 @@
-import { Footer } from "@/app/_components/organisms";
+import { Footer, Header } from "@/app/_components/organisms";
 import "./styles/index.scss";
 
 export default function RootLayout({
@@ -9,7 +9,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <Header />
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

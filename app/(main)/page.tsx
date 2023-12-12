@@ -1,4 +1,4 @@
-import { HomeTemp } from "./_components/templates";
+import { HomeTemp } from "../_components/templates";
 
 const Home = () => <HomeTemp />;
 
