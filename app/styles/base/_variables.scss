@@ -1,0 +1,23 @@
+@use "sass:color";
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --white-transparent: rgba(255, 255, 255, 0.5);
+  --black-transparent: rgba(0, 0, 0, 0.5);
+  --bg-black-pale: #101010;
+  --color-brand: #d87d4a;
+  --color-brand-pale: #fbaf85;
+  --bg-grey: #f1f1f1;
+  --bg-grey-pale: #fafafa;
+
+  --main-horizontal-space: 1.5rem;
+
+  @media (width >= 768px) {
+    --main-horizontal-space: 2.5rem;
+  }
+
+  @media (width >= 1440px) {
+    --main-horizontal-space: 10.3rem;
+  }
+}

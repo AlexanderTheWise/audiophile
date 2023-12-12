@@ -1,5 +1,5 @@
-import { Footer } from "@/components/organisms";
-import "@/styles/index.scss";
+import { Footer } from "@/app/_components/organisms";
+import "./styles/index.scss";
 
 export default function RootLayout({
   children,
