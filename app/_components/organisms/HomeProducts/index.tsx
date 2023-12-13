@@ -3,6 +3,14 @@ import { GreyBox, H2, LinkSecondary } from "@/app/_components/atoms";
 import { SecondaryProductOverview } from "@/app/_components/molecules";
 import { CommonProps } from "@/app/_components/types";
 import "./home-products.scss";
+import { ProductOverview } from "@/app/models/Product";
+
+const productOverview: ProductOverview = {
+  name: "ZX9 Speaker",
+  description:
+    "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
+  slug: "speakers/zx9-speaker",
+};
 
 const HomeProducts = ({ className = "" }: CommonProps) => (
   <section className={`${className} home-products`}>
@@ -25,10 +33,7 @@ const HomeProducts = ({ className = "" }: CommonProps) => (
           height="207"
         />
       </picture>
-      <SecondaryProductOverview
-        title="zx9 speaker"
-        headline="Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
-      />
+      <SecondaryProductOverview productOverview={productOverview} />
     </div>
     <div className="home-products__box-two flex-col content-center items-flex-start row-gap-32px">
       <H2>zx7 speaker</H2>

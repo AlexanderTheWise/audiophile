@@ -1,5 +1,6 @@
-import { CommonContainerProps, ResponsiveImage } from "@/app/_components/types";
+import { CommonContainerProps } from "@/app/_components/types";
 import Image from "next/image";
+import { ResponsiveImage } from "@/app/models/Product";
 import "./containers.scss";
 
 export const WrapperMain = ({
@@ -57,8 +58,9 @@ export const CategoriesGroupBox = ({
 export const ResponsiveImageDetail = ({
   children,
   className,
-  image: { name, mobile, tablet, desktop },
-}: CommonContainerProps & { image: ResponsiveImage }) => (
+  image: { mobile, tablet, desktop },
+  name,
+}: CommonContainerProps & { image: ResponsiveImage; name: string }) => (
   <section
     className={`${className} responsive-image-detail flex-col items-center row-gap-32px`}
   >
@@ -73,6 +75,6 @@ export const ResponsiveImageDetail = ({
       <Image src={mobile} alt={name} width="654" height="704" />
     </picture>
 
-    {children}
+    <div className="responsive-image-detail__content">{children}</div>
   </section>
 );

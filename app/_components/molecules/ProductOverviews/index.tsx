@@ -9,48 +9,59 @@ import {
   ParWTrans,
   ResponsiveCenterToLeft,
 } from "@/app/_components/atoms";
-import { ProductOverview } from "@/app/_components/types";
+import { ProductOverview } from "@/app/models/Product";
+import { CommonProps } from "../../types";
 
 type Container = typeof H1;
 
 type ProductOverviewHoc = {
-  Title: Container;
-  Headline: Container;
+  Name: Container;
+  Description: Container;
   Link?: typeof LinkPrimary;
   OverText?: Container;
 };
 
+type ProductOverviewProps = { productOverview: ProductOverview } & CommonProps;
+
 const productOverviewHoc = ({
-  Headline,
-  Title,
+  Name,
+  Description,
   Link = LinkPrimary,
   OverText,
 }: ProductOverviewHoc) =>
-  function ProductOverView({ headline, title, className }: ProductOverview) {
+  function ProductOverView({
+    productOverview: { description, name, slug },
+    className = "",
+  }: ProductOverviewProps) {
     return (
       <ResponsiveCenterToLeft className={className}>
         {OverText && <OverText>new product</OverText>}
-        <Title>{title}</Title>
-        <Headline>{headline}</Headline>
-        <Link />
+        <Name>{name}</Name>
+        <Description>{description}</Description>
+        <Link href={slug} />
       </ResponsiveCenterToLeft>
     );
   };
 
 export const PrimaryProductOverView = productOverviewHoc({
-  Title: H1,
   OverText: OverWTrans,
-  Headline: ParWTrans,
+  Name: H1,
+  Description: ParWTrans,
 });
 
 export const SecondaryProductOverview = productOverviewHoc({
-  Title: H1,
-  Headline: ParWTrans,
+  Name: H1,
+  Description: ParWTrans,
   Link: LinkMainHomeProduct,
 });
 
 export const TerciaryProductOverview = productOverviewHoc({
   OverText: OverBrand,
-  Title: H2,
-  Headline: ParBTrans,
+  Name: H2,
+  Description: ParBTrans,
+});
+
+export const QuaternaryProductOverview = productOverviewHoc({
+  Name: H2,
+  Description: ParBTrans,
 });

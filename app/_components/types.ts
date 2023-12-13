@@ -15,11 +15,6 @@ export interface CommonButtonProps extends CommonContainerProps {
   onClick: () => void;
 }
 
-export interface ProductOverview extends CommonProps {
-  title: string;
-  headline: string;
-}
-
 export interface Category {
   id: number;
   name: string;
@@ -30,11 +25,4 @@ export type Categories = Category[];
 
 export interface CategoryLinkProps extends CommonProps {
   category: Omit<Category, "id">;
-}
-
-export interface ResponsiveImage {
-  name: string;
-  mobile: string;
-  tablet: string;
-  desktop: string;
 }

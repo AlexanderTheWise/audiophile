@@ -4,14 +4,8 @@
   height: clamp(37.5rem, 34.661rem + 12.113vw, 45.563rem);
   background: url("/images/home/mobile/image-hero.jpg") center / cover no-repeat;
 
-  &__content {
-    > h1 {
-      max-width: min-content;
-    }
-
-    > p {
-      max-width: 21.8rem;
-    }
+  p {
+    max-width: 21.8rem;
   }
 
   @media (width >= 768px) {

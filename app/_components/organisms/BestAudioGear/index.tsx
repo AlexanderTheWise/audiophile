@@ -4,22 +4,23 @@ import {
   ParBTrans,
   ResponsiveCenterToLeft,
 } from "@/app/_components/atoms";
-import { CommonProps, ResponsiveImage } from "../../types";
+import { CommonProps } from "../../types";
 import "./best-audio-gear.scss";
+import { ResponsiveImage } from "@/app/models/Product";
 
 const image: ResponsiveImage = {
   mobile: "/images/shared/mobile/image-best-gear.jpg",
   tablet: "/images/shared/tablet/image-best-gear.jpg",
   desktop: "/images/shared/desktop/image-best-gear.jpg",
-  name: "A young man wearing headphones",
 };
 
 const BestAudioGear = ({ className = "" }: CommonProps) => (
   <ResponsiveImageDetail
     className={`${className} best-audio-gear`}
     image={image}
+    name="A young man wearing headphones"
   >
-    <ResponsiveCenterToLeft className="best-audio-gear__text-content">
+    <ResponsiveCenterToLeft>
       <H2>
         bringing you the{" "}
         <span className="best-audio-gear__highlight">best</span> audio gear
