@@ -3,14 +3,8 @@
     color: var(--color-brand);
   }
 
-  &__text-content {
-    @media (width >= 768px) {
-      padding: 0 3rem;
-    }
-    @media (width >= 1440px) {
-      padding: 0;
-      max-width: 27.8rem;
-    }
+  h2 {
+    max-width: 35.8rem;
   }
 
   @media (width >= 1440px) {

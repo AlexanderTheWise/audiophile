@@ -1,21 +1,18 @@
 import { LinkQuaternary } from "@/app/_components/atoms";
 import { CommonProps } from "@/app/_components/types";
 
+const pageslinks = ["home", "headphones", "speakers", "earphones"];
+
 const PagesLinks = ({ className = "" }: CommonProps) => (
   <nav className={className}>
     <ul className="flex column-gap-34px row-gap-24px">
-      <li>
-        <LinkQuaternary>home</LinkQuaternary>
-      </li>
-      <li>
-        <LinkQuaternary>headphones</LinkQuaternary>
-      </li>
-      <li>
-        <LinkQuaternary>speakers</LinkQuaternary>
-      </li>
-      <li>
-        <LinkQuaternary>earphones</LinkQuaternary>
-      </li>
+      {pageslinks.map((link) => (
+        <li key={link}>
+          <LinkQuaternary href={link === "home" ? "/" : `/${link}`}>
+            {link}
+          </LinkQuaternary>
+        </li>
+      ))}
     </ul>
   </nav>
 );

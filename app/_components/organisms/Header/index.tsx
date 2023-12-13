@@ -4,19 +4,35 @@ import { usePathname } from "next/navigation";
 import Banner from "../Banner";
 import { Hero } from "..";
 import "./header.scss";
+import CategoryHero from "../CategoryHero";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const pathname = usePathname();
-  let component: React.ReactNode;
+  const [component, setComponent] = useState<React.ReactNode>(null);
 
-  switch (pathname) {
-    case "/":
-      component = <Hero />;
-      break;
+  useEffect(() => {
+    switch (pathname) {
+      case "/":
+        setComponent(<Hero />);
+        break;
 
-    default:
-      component = null;
-  }
+      case "/headphones":
+        setComponent(<CategoryHero category="headphones" />);
+        break;
+
+      case "/speakers":
+        setComponent(<CategoryHero category="speakers" />);
+        break;
+
+      case "/earphones":
+        setComponent(<CategoryHero category="earphones" />);
+        break;
+
+      default:
+        setComponent(null);
+    }
+  }, [pathname]);
 
   return (
     <header className="header">

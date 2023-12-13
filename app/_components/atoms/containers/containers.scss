@@ -6,6 +6,11 @@
 .center-to-left {
   text-align: center;
 
+  h1,
+  h2 {
+    max-width: min-content;
+  }
+
   @media (width >= 1440px) {
     text-align: left;
     align-items: start;
@@ -35,7 +40,7 @@
   }
 
   &--category {
-    padding-top: clamp(4rem, 1.887rem + 9.014vw, 10rem) $common-spacing;
+    padding-top: clamp(4rem, 1.887rem + 9.014vw, 10rem);
     row-gap: $common-spacing;
   }
 
@@ -45,6 +50,16 @@
 }
 
 .responsive-image-detail {
+  &__content {
+    @media (width >= 768px) {
+      padding: 0 3rem;
+    }
+    @media (width >= 1440px) {
+      padding: 0;
+      max-width: 27.8rem;
+    }
+  }
+
   @media (width < 1440px) {
     picture,
     img {

@@ -5,7 +5,7 @@ describe("<HomeProducts /> component", () => {
   it("should render a level one heading called 'zx9 speaker'", () => {
     const { getByRole } = render(<HomeProducts />);
     const level = 1;
-    const name = "zx9 speaker";
+    const name = "ZX9 Speaker";
 
     const heading = getByRole("heading", { level, name });
 
