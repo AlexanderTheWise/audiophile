@@ -1,5 +1,3 @@
-"use client";
-
 import { useContext, useState } from "react";
 import { ProductTile } from "@/app/store/ProductCart/types";
 import { ProductCartContext } from "@/app/_context/ProductCart";

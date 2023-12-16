@@ -1,5 +1,5 @@
 import { Product, ProductOverview } from "@/app/models/Product";
-import { ResponsiveImageDetail } from "../../atoms";
+import { PrimaryImageDetail } from "../../atoms";
 import {
   QuaternaryProductOverview,
   TerciaryProductOverview,
@@ -19,17 +19,13 @@ const CategoryProduct = ({
   };
 
   return (
-    <ResponsiveImageDetail
-      className={className}
-      image={categoryImage}
-      name={name}
-    >
+    <PrimaryImageDetail className={className} image={categoryImage} name={name}>
       {isNew ? (
         <TerciaryProductOverview productOverview={productOverview} />
       ) : (
         <QuaternaryProductOverview productOverview={productOverview} />
       )}
-    </ResponsiveImageDetail>
+    </PrimaryImageDetail>
   );
 };
 

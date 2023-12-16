@@ -4,3 +4,4 @@ export { default as Footer } from "./Footer";
 export { default as HomeProducts } from "./HomeProducts";
 export { default as BestAudioGear } from "./BestAudioGear";
 export { default as CategoryProduct } from "./CategoryProduct";
+export { default as ProductDetail } from "./ProductDetail";

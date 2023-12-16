@@ -1,4 +1,4 @@
-import { CommonButtonProps } from "@/app/_components/types";
+import { CommonButtonProps, CommonProps } from "@/app/_components/types";
 import "./buttons.scss";
 
 export const Burger = ({
@@ -18,4 +18,36 @@ export const Burger = ({
     <div className="burger__bar"></div>
     <div className="burger__bar"></div>
   </button>
+);
+
+export const ButtonPrimary = ({
+  children,
+  onClick,
+  className = "",
+}: CommonButtonProps) => (
+  <button className={`${className} btn--primary`} onClick={onClick}>
+    {children}
+  </button>
+);
+
+const Counter = ({ children, onClick, className = "" }: CommonButtonProps) => (
+  <button className={className} onClick={onClick}>
+    {children}
+  </button>
+);
+
+export const Incrementor = ({
+  onClick,
+}: Omit<CommonButtonProps, "children">) => (
+  <Counter className="counter to-brand" onClick={onClick}>
+    +
+  </Counter>
+);
+
+export const Decrementor = ({
+  onClick,
+}: Omit<CommonButtonProps, "children">) => (
+  <Counter className="counter to-brand" onClick={onClick}>
+    -
+  </Counter>
 );
