@@ -13,7 +13,7 @@
     flex: 1;
   }
 
-  @media (width <= 768px) {
+  @media (width < 768px) {
     &__pages-links {
       display: none;
     }

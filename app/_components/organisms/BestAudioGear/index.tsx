@@ -1,12 +1,12 @@
 import {
-  ResponsiveImageDetail,
+  PrimaryImageDetail,
   H2,
   ParBTrans,
   ResponsiveCenterToLeft,
 } from "@/app/_components/atoms";
 import { CommonProps } from "../../types";
-import "./best-audio-gear.scss";
 import { ResponsiveImage } from "@/app/models/Product";
+import "./best-audio-gear.scss";
 
 const image: ResponsiveImage = {
   mobile: "/images/shared/mobile/image-best-gear.jpg",
@@ -15,7 +15,7 @@ const image: ResponsiveImage = {
 };
 
 const BestAudioGear = ({ className = "" }: CommonProps) => (
-  <ResponsiveImageDetail
+  <PrimaryImageDetail
     className={`${className} best-audio-gear`}
     image={image}
     name="A young man wearing headphones"
@@ -34,7 +34,7 @@ const BestAudioGear = ({ className = "" }: CommonProps) => (
         to buy your portable audio equipment.
       </ParBTrans>
     </ResponsiveCenterToLeft>
-  </ResponsiveImageDetail>
+  </PrimaryImageDetail>
 );
 
 export default BestAudioGear;
