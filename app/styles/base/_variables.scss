@@ -11,13 +11,9 @@
   --bg-grey: #f1f1f1;
   --bg-grey-pale: #fafafa;
 
-  --main-horizontal-space: 1.5rem;
+  --main-horizontal-space: clamp(1.5rem, 0.546rem + 4.071vw, 2.5rem);
 
   @media (width >= 768px) {
-    --main-horizontal-space: 2.5rem;
-  }
-
-  @media (width >= 1440px) {
-    --main-horizontal-space: 10.3rem;
+    --main-horizontal-space: clamp(2.5rem, -6.428rem + 18.601vw, 10.312rem);
   }
 }

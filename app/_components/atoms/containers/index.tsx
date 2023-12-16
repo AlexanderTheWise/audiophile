@@ -55,14 +55,19 @@ export const CategoriesGroupBox = ({
   </ul>
 );
 
-export const ResponsiveImageDetail = ({
+type ImageDetailProps = {
+  image: ResponsiveImage;
+  name: string;
+} & CommonContainerProps;
+
+export const PrimaryImageDetail = ({
   children,
-  className,
   image: { mobile, tablet, desktop },
   name,
-}: CommonContainerProps & { image: ResponsiveImage; name: string }) => (
+  className = "",
+}: ImageDetailProps) => (
   <section
-    className={`${className} responsive-image-detail flex-col items-center row-gap-32px`}
+    className={`${className} image-detail--primary flex-col items-center row-gap-32px`}
   >
     <picture>
       <source
@@ -75,6 +80,30 @@ export const ResponsiveImageDetail = ({
       <Image src={mobile} alt={name} width="654" height="704" />
     </picture>
 
-    <div className="responsive-image-detail__content">{children}</div>
+    <div className="image-detail--primary__content">{children}</div>
+  </section>
+);
+
+export const SecondaryImageDetail = ({
+  children,
+  image: { mobile, tablet, desktop },
+  name,
+  className = "",
+}: ImageDetailProps) => (
+  <section
+    className={`${className} image-detail--secondary flex-col items-center row-gap-32px`}
+  >
+    <picture>
+      <source
+        srcSet={desktop}
+        media="(min-width: 1440px)"
+        width="540"
+        height="560"
+      />
+      <source srcSet={tablet} media="(min-width: 768px)" width="281" />
+      <Image src={mobile} alt={name} width="654" height="654" />
+    </picture>
+
+    <div className="image-detail--secondary__content">{children}</div>
   </section>
 );
