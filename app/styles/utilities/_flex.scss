@@ -24,7 +24,7 @@ $flex-alignment-types: flex-start, center, space-around, space-evenly,
   }
 }
 
-$gaps: 16px, 20px, 24px, 32px, 34px, 48px;
+$gaps: 8px, 16px, 18px, 20px, 24px, 32px, 34px, 48px, 56px, 120px, 125px;
 
 @each $gap in $gaps {
   .column-gap-#{$gap} {
@@ -34,4 +34,8 @@ $gaps: 16px, 20px, 24px, 32px, 34px, 48px;
   .row-gap-#{$gap} {
     row-gap: $gap;
   }
+}
+
+.growing-row-gap {
+  row-gap: clamp(1.5rem, 1.023rem + 2.036vw, 2rem);
 }
