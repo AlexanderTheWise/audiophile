@@ -1,0 +1,17 @@
+.product-temp {
+  > *:not(:first-child) {
+    @media (width <= 768px) {
+      margin-top: clamp(5.5rem, 3.592rem + 8.142vw, 7.5rem);
+    }
+    @media (width >= 768px) {
+      margin-top: clamp(7.5rem, 4.643rem + 5.952vw, 10rem);
+    }
+  }
+
+  &__features-items {
+    @media (width >= 1440px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
