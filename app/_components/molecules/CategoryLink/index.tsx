@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { GreyBox, LinkTertiary } from "@/app/_components/atoms";
-import { CategoryLinkProps } from "@/app/_components/types";
+import { GreyBox, LinkTertiary } from "@/_components/atoms";
+import { CategoryLinkProps } from "@/_components/types";
 import "./category-link.scss";
 
 const CategoryLink = ({
@@ -18,7 +18,7 @@ const CategoryLink = ({
       />
 
       <p className="text--category">{name}</p>
-      <LinkTertiary />
+      <LinkTertiary href={`/${name}`} />
     </GreyBox>
   </div>
 );

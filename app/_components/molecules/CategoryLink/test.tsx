@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
+import { Category } from "@/_components/types";
 import CategoryLink from ".";
-import { Category } from "@/app/_components/types";
 
 const category: Omit<Category, "id"> = {
   imageUrl: "/image.png",

@@ -1,5 +1,5 @@
-import products from "@/app/lib/products.json";
 import { render } from "@testing-library/react";
+import products from "@/lib/products.json";
 import Gallery from ".";
 
 const product = products[0];

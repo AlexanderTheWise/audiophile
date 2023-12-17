@@ -1,6 +1,6 @@
-import { CommonProps } from "@/app/_components/types";
-import { Audiophile, ParWTrans } from "@/app/_components/atoms";
-import { PagesLinks, SocialLinks } from "@/app/_components/molecules";
+import { CommonProps } from "@/_components/types";
+import { Audiophile, ParWTrans } from "@/_components/atoms";
+import { PagesLinks, SocialLinks } from "@/_components/molecules";
 import "./footer.scss";
 
 const Footer = ({ className = "" }: CommonProps) => {

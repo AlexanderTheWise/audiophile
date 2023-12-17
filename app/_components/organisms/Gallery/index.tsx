@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Gallery } from "@/app/models/Product";
+import { Gallery } from "@/models/Product";
 import "./gallery.scss";
 
 export type GalleryProps = {

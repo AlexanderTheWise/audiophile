@@ -1,5 +1,5 @@
-import { CategoryTemp } from "@/app/_components/templates";
-import { getProductsByCategory } from "@/app/lib/products";
+import { CategoryTemp } from "@/_components/templates";
+import { getProductsByCategory } from "@/lib/products";
 
 type CategoryProps = Record<"params", { category: string }>;
 

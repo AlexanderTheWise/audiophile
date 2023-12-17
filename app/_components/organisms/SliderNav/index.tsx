@@ -1,8 +1,8 @@
 "use client";
 
-import { Burger } from "@/app/_components/atoms";
-import { CategoriesLinks } from "@/app/_components/molecules";
-import { CommonProps } from "@/app/_components/types";
+import { Burger } from "@/_components/atoms";
+import { CategoriesLinks } from "@/_components/molecules";
+import { CommonProps } from "@/_components/types";
 import { useState } from "react";
 import "./slider-nav.scss";
 

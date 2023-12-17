@@ -1,7 +1,7 @@
 import { act } from "react-dom/test-utils";
 import { useContext } from "react";
-import renderHookWithProviders from "@/app/_testUtils/renderHookWithProviders";
-import { ProductCartContext } from "@/app/_context/ProductCart";
+import renderHookWithProviders from "@/_testUtils/renderHookWithProviders";
+import { ProductCartContext } from "@/_context/ProductCart";
 import useProductDetail, { UseProductDetailTile } from ".";
 
 const initialProps: UseProductDetailTile = {

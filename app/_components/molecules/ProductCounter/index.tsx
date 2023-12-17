@@ -12,7 +12,7 @@ const ProductCounter = ({
   decrement,
   increment,
 }: ProductCounterProps) => (
-  <div className="product-counter flex content-center items-center column-gap-20px">
+  <div className="product-counter text--bold flex content-center items-center column-gap-20px">
     <Decrementor onClick={decrement} />
     <div
       role="region"

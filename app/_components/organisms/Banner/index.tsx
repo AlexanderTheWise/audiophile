@@ -1,6 +1,6 @@
-import { Audiophile } from "@/app/_components/atoms";
-import { CommonProps } from "@/app/_components/types";
-import { PagesLinks } from "@/app/_components/molecules";
+import { Audiophile } from "@/_components/atoms";
+import { CommonProps } from "@/_components/types";
+import { PagesLinks } from "@/_components/molecules";
 import SliderNav from "../SliderNav";
 import "./banner.scss";
 

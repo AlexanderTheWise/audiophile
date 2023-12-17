@@ -1,10 +1,5 @@
-import {
-  Facebook,
-  Instagram,
-  LinkIcon,
-  Twitter,
-} from "@/app/_components/atoms";
-import { CommonProps } from "@/app/_components/types";
+import { Facebook, Instagram, LinkIcon, Twitter } from "@/_components/atoms";
+import { CommonProps } from "@/_components/types";
 
 const SocialLinks = ({ className = "" }: CommonProps) => (
   <ul className={`${className} flex items-center column-gap-24px`}>
