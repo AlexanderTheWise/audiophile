@@ -1,5 +1,5 @@
-import renderWithProviders from "@/app/_testUtils/renderWithProviders";
-import products from "@/app/lib/products.json";
+import renderWithProviders from "@/_testUtils/renderWithProviders";
+import products from "@/lib/products.json";
 import ProductDetail from ".";
 import userEvent from "@testing-library/user-event";
 

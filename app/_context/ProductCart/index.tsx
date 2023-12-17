@@ -1,11 +1,8 @@
 "use client";
 
 import { createContext, useReducer, Dispatch, useMemo } from "react";
-import { productCartReducer } from "@/app/store/ProductCart/reducer";
-import {
-  ProductCart,
-  UnionProductActions,
-} from "@/app/store/ProductCart/types";
+import { productCartReducer } from "@/store/ProductCart/reducer";
+import { ProductCart, UnionProductActions } from "@/store/ProductCart/types";
 
 type ProductCartContext = {
   state: ProductCart;

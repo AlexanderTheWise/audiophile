@@ -1,6 +1,6 @@
 "use client";
 
-import { Product, ProductOverview } from "@/app/models/Product";
+import { Product, ProductOverview } from "@/models/Product";
 import { ButtonPrimary, SecondaryImageDetail } from "../../atoms";
 import { CommonProps } from "../../types";
 import {
@@ -8,7 +8,7 @@ import {
   QuinaryProductOverview,
   SenaryProductOverview,
 } from "../../molecules";
-import useProductDetail from "@/app/hooks/useProductDetail";
+import useProductDetail from "@/hooks/useProductDetail";
 
 type ProductDetailProps = Record<"product", Product> & CommonProps;
 

@@ -1,6 +1,6 @@
-import { CommonContainerProps } from "@/app/_components/types";
+import { CommonContainerProps } from "@/_components/types";
 import Image from "next/image";
-import { ResponsiveImage } from "@/app/models/Product";
+import { ResponsiveImage } from "@/models/Product";
 import "./containers.scss";
 import { H3 } from "..";
 

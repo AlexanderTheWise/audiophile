@@ -1,4 +1,4 @@
-import { CommonButtonProps, CommonProps } from "@/app/_components/types";
+import { CommonButtonProps, CommonProps } from "@/_components/types";
 import "./buttons.scss";
 
 export const Burger = ({

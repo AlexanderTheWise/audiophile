@@ -1,5 +1,5 @@
-import { PrimaryProductOverView } from "@/app/_components/molecules";
-import { ProductOverview } from "@/app/models/Product";
+import { PrimaryProductOverView } from "@/_components/molecules";
+import { ProductOverview } from "@/models/Product";
 import "./hero.scss";
 
 const productOverview: ProductOverview = {

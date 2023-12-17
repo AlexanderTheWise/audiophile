@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { GreyBox, H2, LinkSecondary } from "@/app/_components/atoms";
-import { SecondaryProductOverview } from "@/app/_components/molecules";
-import { CommonProps } from "@/app/_components/types";
+import { GreyBox, H2, LinkSecondary } from "@/_components/atoms";
+import { SecondaryProductOverview } from "@/_components/molecules";
+import { CommonProps } from "@/_components/types";
 import "./home-products.scss";
-import { ProductOverview } from "@/app/models/Product";
+import { ProductOverview } from "@/models/Product";
 
 const productOverview: ProductOverview = {
   name: "ZX9 Speaker",

@@ -1,5 +1,5 @@
-import { LinkQuaternary } from "@/app/_components/atoms";
-import { CommonProps } from "@/app/_components/types";
+import { LinkQuaternary } from "@/_components/atoms";
+import { CommonProps } from "@/_components/types";
 
 const pageslinks = ["home", "headphones", "speakers", "earphones"];
 

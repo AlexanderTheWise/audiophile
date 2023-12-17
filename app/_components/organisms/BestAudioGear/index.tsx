@@ -3,9 +3,9 @@ import {
   H2,
   ParBTrans,
   ResponsiveCenterToLeft,
-} from "@/app/_components/atoms";
+} from "@/_components/atoms";
 import { CommonProps } from "../../types";
-import { ResponsiveImage } from "@/app/models/Product";
+import { ResponsiveImage } from "@/models/Product";
 import "./best-audio-gear.scss";
 
 const image: ResponsiveImage = {
@@ -21,9 +21,8 @@ const BestAudioGear = ({ className = "" }: CommonProps) => (
     name="A young man wearing headphones"
   >
     <ResponsiveCenterToLeft>
-      <H2>
-        bringing you the{" "}
-        <span className="best-audio-gear__highlight">best</span> audio gear
+      <H2 className="best-audio-gear__title">
+        bringing you the <span className="text--brand">best</span> audio gear
       </H2>
       <ParBTrans>
         Located at the heart of New York City, Audiophile is the premier store

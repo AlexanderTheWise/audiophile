@@ -1,4 +1,4 @@
-import { Product, ProductOverview } from "@/app/models/Product";
+import { Product, ProductOverview } from "@/models/Product";
 import { PrimaryImageDetail } from "../../atoms";
 import {
   QuaternaryProductOverview,

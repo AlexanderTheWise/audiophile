@@ -8,8 +8,8 @@ import {
   ParBTrans,
   ParWTrans,
   ResponsiveCenterToLeft,
-} from "@/app/_components/atoms";
-import { ProductOverview } from "@/app/models/Product";
+} from "@/_components/atoms";
+import { ProductOverview } from "@/models/Product";
 import { CommonProps } from "../../types";
 
 type Container = typeof H1;

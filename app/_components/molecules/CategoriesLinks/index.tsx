@@ -1,5 +1,5 @@
-import { CategoriesGroupBox } from "@/app/_components/atoms";
-import { Categories } from "@/app/_components/types";
+import { CategoriesGroupBox } from "@/_components/atoms";
+import { Categories } from "@/_components/types";
 import CategoryLink from "../CategoryLink";
 
 const categories: Categories = [

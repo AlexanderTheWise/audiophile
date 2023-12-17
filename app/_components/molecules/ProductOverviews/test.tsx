@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { PrimaryProductOverView, TerciaryProductOverview } from "..";
-import { ProductOverview } from "@/app/models/Product";
+import { ProductOverview } from "@/models/Product";
 
 const productOverview: ProductOverview = {
   name: "XX99 Mark II Headphones",

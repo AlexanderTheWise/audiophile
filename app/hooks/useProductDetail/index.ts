@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { ProductTile } from "@/app/store/ProductCart/types";
-import { ProductCartContext } from "@/app/_context/ProductCart";
-import { addProductActionCreator } from "@/app/store/ProductCart/actions";
+import { ProductTile } from "@/store/ProductCart/types";
+import { ProductCartContext } from "@/_context/ProductCart";
+import { addProductActionCreator } from "@/store/ProductCart/actions";
 
 export type UseProductDetailTile = Omit<ProductTile, "count"> & { id: number };
 
@@ -10,12 +10,13 @@ const useProductDetail = (
   initialCount = 1,
 ) => {
   const [count, setCount] = useState(initialCount);
-  const { dispatch } = useContext(ProductCartContext);
+  const { dispatch, state } = useContext(ProductCartContext);
 
   const increment = () => setCount((prev) => prev + 1);
   const decrement = () => setCount((prev) => (prev == 1 ? prev : prev - 1));
   const addToCart = () => {
     dispatch(addProductActionCreator([id, { ...rest, count }]));
+    console.log(state);
   };
 
   return { increment, decrement, addToCart, count };
