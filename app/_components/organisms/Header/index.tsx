@@ -1,11 +1,11 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import CategoryHero from "../CategoryHero";
 import Banner from "../Banner";
 import { Hero } from "..";
 import "./header.scss";
-import CategoryHero from "../CategoryHero";
-import { useEffect, useState } from "react";
 
 const Header = () => {
   const pathname = usePathname();
