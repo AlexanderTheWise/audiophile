@@ -2,6 +2,7 @@ import { CommonContainerProps } from "@/app/_components/types";
 import Image from "next/image";
 import { ResponsiveImage } from "@/app/models/Product";
 import "./containers.scss";
+import { H3 } from "..";
 
 export const WrapperMain = ({
   children,
@@ -28,7 +29,7 @@ export const WrapperProduct = ({
   children,
   className = "",
 }: CommonContainerProps) => (
-  <main className={`${className} wrapper--product`}>{children}</main>
+  <div className={`${className} wrapper--product`}>{children}</div>
 );
 
 export const ResponsiveCenterToLeft = ({
@@ -105,5 +106,20 @@ export const SecondaryImageDetail = ({
     </picture>
 
     <div className="image-detail--secondary__content">{children}</div>
+  </section>
+);
+
+type ProductSectionProps = {
+  sectionTitle: string;
+} & CommonContainerProps;
+
+export const ProductSection = ({
+  children,
+  sectionTitle,
+  className = "",
+}: ProductSectionProps) => (
+  <section className={`${className} flex-col growing-row-gap`}>
+    <H3>{sectionTitle}</H3>
+    {children}
   </section>
 );
