@@ -10,7 +10,7 @@ const ProductItem = ({ item: { item, quantity } }: ItemProps) => (
     className="item flex text--capitalize column-gap-32px"
     data-testid="item"
   >
-    <span className="text--brand"></span>
+    <span className="text--brand">{quantity}x</span>
     {item}
   </ParBTrans>
 );
