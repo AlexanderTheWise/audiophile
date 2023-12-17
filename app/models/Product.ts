@@ -4,7 +4,7 @@ export interface ProductOverview {
   slug: string;
 }
 
-interface Other extends Omit<ProductOverview, "description"> {
+export interface Other extends Omit<ProductOverview, "description"> {
   image: ResponsiveImage;
 }
 
@@ -26,12 +26,12 @@ export interface ResponsiveImage {
   desktop: string;
 }
 
-interface Item {
+export interface Item {
   quantity: number;
   item: string;
 }
 
-interface Gallery {
+export interface Gallery {
   first: ResponsiveImage;
   second: ResponsiveImage;
   third: ResponsiveImage;
