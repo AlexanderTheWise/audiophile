@@ -2,6 +2,7 @@ import {
   addProductActionCreator,
   decrementProductSetActionCreator,
   incrementProductSetActionCreator,
+  loadProductCartActionCreator,
 } from "./actions";
 import { productCartReducer } from "./reducer";
 import { AddProductActionPayload, ProductCart, ProductTile } from "./types";
@@ -17,6 +18,19 @@ const payload: AddProductActionPayload = [id, productTile];
 const initialState: ProductCart = Object.fromEntries([payload]);
 
 describe("product cart reducer", () => {
+  describe("receives an action to load the cart", () => {
+    it("should return a new product cart with the received cart", () => {
+      const productCart: ProductCart = { [id]: productTile };
+
+      const newState = productCartReducer(
+        {},
+        loadProductCartActionCreator(productCart),
+      );
+
+      expect(newState).toStrictEqual(productCart);
+    });
+  });
+
   describe("receives an action to add one unit of a product", () => {
     it("should return a new product cart with the product added when it doesn't exists", () => {
       const newState = productCartReducer({}, addProductActionCreator(payload));

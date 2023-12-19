@@ -6,6 +6,7 @@ export interface ProductTile {
 }
 
 export enum ProductActions {
+  loadProductCart,
   addProduct,
   incrementProductSet,
   decrementProductSet,
@@ -18,6 +19,7 @@ interface ProductAction<P> {
 
 export type AddProductActionPayload = [number, ProductTile];
 
+export type LoadProductCartAction = ProductAction<ProductCart>;
 export type AddProductAction = ProductAction<AddProductActionPayload>;
 export type IncrementProductSetAction = ProductAction<number>;
 export type DecrementProductSetAction = IncrementProductSetAction;
@@ -25,6 +27,7 @@ export type DecrementProductSetAction = IncrementProductSetAction;
 export type UnionProductActions =
   | AddProductAction
   | IncrementProductSetAction
-  | DecrementProductSetAction;
+  | DecrementProductSetAction
+  | LoadProductCartAction;
 
 export type ProductCart = Record<number, ProductTile>;
