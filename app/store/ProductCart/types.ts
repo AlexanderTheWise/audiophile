@@ -19,7 +19,7 @@ interface ProductAction<P> {
 
 export type AddProductActionPayload = [number, ProductTile];
 
-export type LoadProductCart = ProductAction<ProductCart>;
+export type LoadProductCartAction = ProductAction<ProductCart>;
 export type AddProductAction = ProductAction<AddProductActionPayload>;
 export type IncrementProductSetAction = ProductAction<number>;
 export type DecrementProductSetAction = IncrementProductSetAction;
@@ -28,6 +28,6 @@ export type UnionProductActions =
   | AddProductAction
   | IncrementProductSetAction
   | DecrementProductSetAction
-  | LoadProductCart;
+  | LoadProductCartAction;
 
 export type ProductCart = Record<number, ProductTile>;

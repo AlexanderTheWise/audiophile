@@ -3,14 +3,14 @@ import {
   AddProductActionPayload,
   DecrementProductSetAction,
   IncrementProductSetAction,
-  LoadProductCart,
+  LoadProductCartAction,
   ProductActions,
   ProductCart,
 } from "./types";
 
 export const loadProductCartActionCreator = (
   payload: ProductCart,
-): LoadProductCart => ({ type: ProductActions.loadProductCart, payload });
+): LoadProductCartAction => ({ type: ProductActions.loadProductCart, payload });
 
 export const addProductActionCreator = (
   payload: AddProductActionPayload,

@@ -1,5 +1,5 @@
 import { Footer, Header } from "@/_components/organisms";
-import ProductCartProvider from "./_context/ProductCart";
+import Providers from "./_context";
 import "./styles/index.scss";
 
 export default function RootLayout({
@@ -10,11 +10,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ProductCartProvider initalState={{}}>
+        <Providers>
           <Header />
           <main>{children}</main>
-        </ProductCartProvider>
-        <Footer />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
