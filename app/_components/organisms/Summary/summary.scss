@@ -1,0 +1,19 @@
+.summary {
+  padding: 2rem 1.5rem;
+
+  &__grand-total {
+    margin-top: 1rem;
+  }
+
+  &__submit-button {
+    width: 100%;
+  }
+
+  @media (width >= 768px) {
+    padding: 2rem;
+  }
+
+  @media (width >= 1440px) {
+    max-width: 21.8rem;
+  }
+}
