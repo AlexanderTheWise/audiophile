@@ -130,3 +130,20 @@ export const ProductSection = ({
     {children}
   </section>
 );
+
+type FormFieldSetProps = {
+  legend: string;
+} & CommonContainerProps;
+
+export const FormFieldSet = ({
+  children,
+  legend,
+  className = "",
+}: FormFieldSetProps) => (
+  <fieldset className={`${className} form-fieldset`}>
+    <legend className="text--sub text--brand">{legend}</legend>
+    <div className="form-fieldset__set row-gap-24px column-gap-16px">
+      {children}
+    </div>
+  </fieldset>
+);

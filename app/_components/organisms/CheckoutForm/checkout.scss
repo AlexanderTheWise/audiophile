@@ -1,0 +1,32 @@
+.checkout-form {
+  padding: 1.5rem;
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__payment-method {
+    grid-column: span 2;
+  }
+
+  @media (width >= 768px) {
+    padding: 1.875rem 1.75rem;
+
+    &__shipping label:first-of-type {
+      grid-column: span 2;
+    }
+
+    &__payment {
+      grid-column: span 2;
+      flex-direction: row;
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
+
+  @media (width >= 1440px) {
+    padding: 3.375rem 3rem;
+  }
+}
