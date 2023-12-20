@@ -9,3 +9,5 @@ export { default as Features } from "./Features";
 export { default as InTheBox } from "./InTheBox";
 export { default as Gallery } from "./Gallery";
 export { default as YouMayAlsoLike } from "./YouMayAlsoLike";
+export { default as Summary } from "./Summary";
+export { default as CheckoutForm } from "./CheckoutForm";

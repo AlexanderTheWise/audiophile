@@ -53,8 +53,8 @@ const Summary = () => {
       </div>
 
       <ButtonPrimary
-        className="summary__submit-button"
         onClick={() => {}}
+        className="summary__submit-button"
         type="submit"
         form="checkout-form"
       >

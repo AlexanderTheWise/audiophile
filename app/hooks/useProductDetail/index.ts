@@ -10,13 +10,12 @@ const useProductDetail = (
   initialCount = 1,
 ) => {
   const [count, setCount] = useState(initialCount);
-  const { dispatch, state } = useContext(ProductCartContext);
+  const { dispatch } = useContext(ProductCartContext);
 
   const increment = () => setCount((prev) => prev + 1);
   const decrement = () => setCount((prev) => (prev == 1 ? prev : prev - 1));
   const addToCart = () => {
     dispatch(addProductActionCreator([id, { ...rest, count }]));
-    console.log(state);
   };
 
   return { increment, decrement, addToCart, count };

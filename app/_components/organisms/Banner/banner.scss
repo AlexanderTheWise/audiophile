@@ -5,8 +5,8 @@
 
   height: 5.625rem;
   padding: 0 var(--main-horizontal-space);
-  background-color: var(--black);
   border-bottom: var(--border-bottom);
+  background-color: transparent;
 
   &__content {
     height: 100%;
