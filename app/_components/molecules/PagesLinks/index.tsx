@@ -1,7 +1,13 @@
 import { LinkQuaternary } from "@/_components/atoms";
 import { CommonProps } from "@/_components/types";
 
-const pageslinks = ["home", "headphones", "speakers", "earphones"];
+export const pageslinks = [
+  "home",
+  "headphones",
+  "speakers",
+  "earphones",
+  "checkout",
+];
 
 const PagesLinks = ({ className = "" }: CommonProps) => (
   <nav className={className}>

@@ -31,6 +31,7 @@ const HomeProducts = ({ className = "" }: CommonProps) => (
           alt="zx9 speaker"
           width="172"
           height="207"
+          priority={true}
         />
       </picture>
       <SecondaryProductOverview productOverview={productOverview} />

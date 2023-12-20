@@ -1,0 +1,19 @@
+.checkout {
+  padding-left: var(--main-horizontal-space);
+  padding-right: var(--main-horizontal-space);
+  padding-bottom: clamp(6.125rem, 5.729rem + 1.69vw, 7.25rem);
+  background-color: var(--bg-grey-pale);
+
+  @media (width >= 1440px) {
+    flex-direction: row;
+    column-gap: 1.875rem;
+
+    > :first-child {
+      flex: 1;
+    }
+
+    > :nth-child(2) {
+      height: min-content;
+    }
+  }
+}
