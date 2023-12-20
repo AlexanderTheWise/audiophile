@@ -20,12 +20,17 @@ export const Burger = ({
   </button>
 );
 
+type ButtonPrimaryProps = {
+  type?: "button" | "reset" | "submit";
+  form?: string;
+} & CommonButtonProps;
+
 export const ButtonPrimary = ({
   children,
-  onClick,
   className = "",
-}: CommonButtonProps) => (
-  <button className={`${className} btn--primary`} onClick={onClick}>
+  ...rest
+}: ButtonPrimaryProps) => (
+  <button className={`${className} btn--primary`} {...rest}>
     {children}
   </button>
 );

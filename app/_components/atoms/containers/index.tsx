@@ -47,6 +47,13 @@ export const GreyBox = ({ children, className = "" }: CommonContainerProps) => (
   <div className={`${className} greybox`}>{children}</div>
 );
 
+export const WhiteBox = ({
+  children,
+  className = "",
+}: CommonContainerProps) => (
+  <div className={`${className} whitebox`}>{children}</div>
+);
+
 export const CategoriesGroupBox = ({
   children,
   className = "",
