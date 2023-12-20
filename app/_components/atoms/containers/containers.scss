@@ -120,3 +120,18 @@
     }
   }
 }
+
+.form-fieldset {
+  border: none;
+  margin-top: clamp(2rem, 1.362rem + 2.723vw, 3.812rem);
+
+  &__set {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+
+    @media (width >= 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
