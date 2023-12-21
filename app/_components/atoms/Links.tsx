@@ -3,11 +3,12 @@ import { CommonLinkProps } from "../types";
 import { ArrowRight } from ".";
 
 export const LinkPrimary = ({
+  children,
   className = "",
   href = "#",
-}: CommonLinkProps) => (
+}: CommonLinkProps & { children?: React.ReactNode }) => (
   <Link href={href} className={`${className} btn--primary`}>
-    see product
+    {children ?? "see product"}
   </Link>
 );
 

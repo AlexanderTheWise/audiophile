@@ -1,11 +1,12 @@
 import { CommonButtonProps, CommonProps } from "@/_components/types";
+import { CartIcon } from "..";
 import "./buttons.scss";
 
-export const Burger = ({
-  isOpen,
-  onClick,
-  className = "",
-}: Omit<CommonButtonProps, "children"> & { isOpen: boolean }) => (
+type ExpandedButton = {
+  isOpen: boolean;
+} & Omit<CommonButtonProps, "children">;
+
+export const Burger = ({ isOpen, onClick, className = "" }: ExpandedButton) => (
   <button
     id="categories-menu-button"
     aria-label="categories menu"
@@ -55,4 +56,34 @@ export const Decrementor = ({
   <Counter className="counter to-brand" onClick={onClick}>
     -
   </Counter>
+);
+
+export const CartButton = ({
+  isOpen,
+  onClick,
+  className = "",
+}: ExpandedButton) => (
+  <button
+    id="cart-button"
+    aria-label="open the cart"
+    aria-expanded={isOpen}
+    aria-controls="cart"
+    className={`${className} to-brand`}
+    onClick={onClick}
+  >
+    <CartIcon />
+  </button>
+);
+
+export const TextButton = ({
+  children,
+  onClick,
+  className = "",
+}: CommonButtonProps) => (
+  <button
+    className={`${className} text-btn to-brand text--black-transparent`}
+    onClick={onClick}
+  >
+    {children}
+  </button>
 );

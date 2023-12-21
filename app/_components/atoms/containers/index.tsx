@@ -51,7 +51,9 @@ export const WhiteBox = ({
   children,
   className = "",
 }: CommonContainerProps) => (
-  <div className={`${className} whitebox`}>{children}</div>
+  <div className={`${className} whitebox flex-col row-gap-32px`}>
+    {children}
+  </div>
 );
 
 export const CategoriesGroupBox = ({
