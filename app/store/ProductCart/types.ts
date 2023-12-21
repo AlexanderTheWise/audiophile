@@ -10,6 +10,7 @@ export enum ProductActions {
   addProduct,
   incrementProductSet,
   decrementProductSet,
+  removeAllProducts,
 }
 
 interface ProductAction<P> {
@@ -23,11 +24,13 @@ export type LoadProductCartAction = ProductAction<ProductCart>;
 export type AddProductAction = ProductAction<AddProductActionPayload>;
 export type IncrementProductSetAction = ProductAction<number>;
 export type DecrementProductSetAction = IncrementProductSetAction;
+export type RemoveAllProductsAction = { type: ProductActions };
 
 export type UnionProductActions =
   | AddProductAction
   | IncrementProductSetAction
   | DecrementProductSetAction
-  | LoadProductCartAction;
+  | LoadProductCartAction
+  | RemoveAllProductsAction;
 
 export type ProductCart = Record<number, ProductTile>;

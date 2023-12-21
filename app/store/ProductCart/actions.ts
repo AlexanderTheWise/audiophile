@@ -6,6 +6,7 @@ import {
   LoadProductCartAction,
   ProductActions,
   ProductCart,
+  RemoveAllProductsAction,
 } from "./types";
 
 export const loadProductCartActionCreator = (
@@ -28,4 +29,8 @@ export const decrementProductSetActionCreator = (
 ): DecrementProductSetAction => ({
   type: ProductActions.decrementProductSet,
   payload,
+});
+
+export const removeAllProductsActionCreator = (): RemoveAllProductsAction => ({
+  type: ProductActions.removeAllProducts,
 });
