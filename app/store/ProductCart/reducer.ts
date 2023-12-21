@@ -1,7 +1,10 @@
 import {
+  AddProductAction,
+  DecrementProductSetAction,
+  IncrementProductSetAction,
+  LoadProductCartAction,
   ProductActions,
   ProductCart,
-  ProductTile,
   UnionProductActions,
 } from "./types";
 
@@ -19,7 +22,7 @@ export const productCartReducer = (
   switch (action.type) {
     case ProductActions.loadProductCart:
       {
-        const productCart = action.payload as ProductCart;
+        const productCart = (<LoadProductCartAction>action).payload;
 
         resultedState = productCart;
       }
@@ -27,7 +30,7 @@ export const productCartReducer = (
 
     case ProductActions.addProduct:
       {
-        const [id, productTile] = action.payload as [number, ProductTile];
+        const [id, productTile] = (<AddProductAction>action).payload;
         const newState = deepCopy(state);
         const oldProductTile = newState[id];
 
@@ -46,7 +49,7 @@ export const productCartReducer = (
 
     case ProductActions.incrementProductSet:
       {
-        const id = action.payload as number;
+        const id = (<IncrementProductSetAction>action).payload;
         const newState = deepCopy(state);
 
         newState[id].count++;
@@ -57,7 +60,7 @@ export const productCartReducer = (
 
     case ProductActions.decrementProductSet:
       {
-        const id = action.payload as number;
+        const id = (<DecrementProductSetAction>action).payload;
         const newState = deepCopy(state);
 
         if (newState[id].count == 1) {
@@ -67,6 +70,12 @@ export const productCartReducer = (
         }
 
         resultedState = newState;
+      }
+      break;
+
+    case ProductActions.removeAllProducts:
+      {
+        resultedState = initialProducts;
       }
       break;
 

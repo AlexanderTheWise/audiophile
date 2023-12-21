@@ -3,6 +3,7 @@ import {
   decrementProductSetActionCreator,
   incrementProductSetActionCreator,
   loadProductCartActionCreator,
+  removeAllProductsActionCreator,
 } from "./actions";
 import { productCartReducer } from "./reducer";
 import { AddProductActionPayload, ProductCart, ProductTile } from "./types";
@@ -82,6 +83,19 @@ describe("product cart reducer", () => {
       );
 
       expect(newState[id]).toHaveProperty("count", expectedCount);
+    });
+  });
+
+  describe("receives an action to remove all products from the product cart", () => {
+    it("should empty the product cart", () => {
+      expect(initialState).toHaveProperty(id.toString(), productTile);
+
+      const newState = productCartReducer(
+        initialState,
+        removeAllProductsActionCreator(),
+      );
+
+      expect(newState).toStrictEqual({});
     });
   });
 });
