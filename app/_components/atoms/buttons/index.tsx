@@ -67,7 +67,7 @@ export const CartButton = ({
     id="cart-button"
     aria-label="open the cart"
     aria-expanded={isOpen}
-    aria-controls="cart"
+    aria-controls="cart-slide"
     className={`${className} to-brand`}
     onClick={onClick}
   >

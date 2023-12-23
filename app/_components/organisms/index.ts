@@ -11,3 +11,5 @@ export { default as Gallery } from "./Gallery";
 export { default as YouMayAlsoLike } from "./YouMayAlsoLike";
 export { default as Summary } from "./Summary";
 export { default as CheckoutForm } from "./CheckoutForm";
+export { default as CategoriesSlide } from "./CategoriesSlide";
+export { default as CartSlide } from "./CartSlide";

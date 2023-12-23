@@ -25,5 +25,9 @@
     &__content {
       border-bottom: var(--border-bottom);
     }
+
+    &__burger {
+      display: none;
+    }
   }
 }

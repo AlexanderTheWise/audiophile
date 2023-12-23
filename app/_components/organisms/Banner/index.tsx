@@ -17,7 +17,11 @@ const Banner = ({ className = "" }: CommonProps) => {
   return (
     <div className={`${className} banner flex items-center`}>
       <div className="banner__content flex items-center content-space-between">
-        <Burger onClick={toggleBurgerModal} isOpen={categories} />
+        <Burger
+          className="banner__burger"
+          onClick={toggleBurgerModal}
+          isOpen={categories}
+        />
         <Audiophile />
         <PagesLinks className="banner__pages-links" />
         <CartButton onClick={toggleCartModal} isOpen={cart} />
