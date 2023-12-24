@@ -1,10 +1,20 @@
+import { render } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import renderWithProviders from "@/_testUtils/renderWithProviders";
 import { getTotalProducts } from "@/lib/products";
 import { initialState } from "@/_testUtils/data";
+import ProductCartProvider from "@/_context/ProductCart";
 import Cart from ".";
 
-const renderCart = () => renderWithProviders(<Cart />, { initialState });
+const renderCart = () =>
+  render(<Cart />, {
+    wrapper({ children }) {
+      return (
+        <ProductCartProvider initalState={initialState}>
+          {children}
+        </ProductCartProvider>
+      );
+    },
+  });
 const totalProducts = getTotalProducts(initialState);
 const units = Object.values(initialState).map(({ count }) => count);
 const names = ["YX1 Wireless", "XX59"];
@@ -55,10 +65,10 @@ describe("<Cart /> component", () => {
     const name = "Remove all";
     const { getByRole } = renderCart();
 
-    const heading = getByRole("heading");
+    const heading = getByRole("heading", { name: `cart (${totalProducts})` });
     const button = getByRole("button", { name });
 
-    expect(heading).toHaveAccessibleName(`cart (${totalProducts})`);
+    expect(heading).toBeInTheDocument();
     await userEvent.click(button);
     expect(heading).toHaveAccessibleName(`cart (0)`);
   });

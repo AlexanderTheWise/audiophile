@@ -13,8 +13,8 @@ export default function RootLayout({
         <Providers>
           <Header />
           <main>{children}</main>
-          <Footer />
         </Providers>
+        <Footer />
       </body>
     </html>
   );
