@@ -1,0 +1,8 @@
+.cart {
+  padding: 2rem;
+  width: clamp(20.438rem, 17.456rem + 12.723vw, 23.563rem);
+
+  &__checkout {
+    width: 100%;
+  }
+}

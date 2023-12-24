@@ -38,12 +38,12 @@ const HomeProducts = ({ className = "" }: CommonProps) => (
     </div>
     <div className="home-products__box-two flex-col content-center items-flex-start row-gap-32px">
       <H2>zx7 speaker</H2>
-      <LinkSecondary />
+      <LinkSecondary href="/speakers/zx7-speaker" />
     </div>
     <div className="home-products__box-three"></div>
     <GreyBox className="home-products__box-four flex-col content-center items-flex-start row-gap-32px">
       <H2>yx1 earphones</H2>
-      <LinkSecondary />
+      <LinkSecondary href="/earphones/yx1-earphones" />
     </GreyBox>
   </section>
 );

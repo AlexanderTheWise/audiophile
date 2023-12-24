@@ -16,7 +16,7 @@ const Summary = () => {
   const vat = getVat(totalPrice);
 
   return (
-    <WhiteBox className="summary flex-col row-gap-32px">
+    <WhiteBox className="summary">
       <h2 className="text--uppercase">summary</h2>
 
       <ul className="flex-col row-gap-24px">

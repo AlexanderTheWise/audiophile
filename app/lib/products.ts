@@ -15,6 +15,13 @@ export const getTotalPrice = (productCart: ProductCart): number => {
   );
 };
 
+export const getTotalProducts = (productCart: ProductCart): number => {
+  return Object.values(productCart).reduce(
+    (accumulator, { count, price }) => accumulator + count,
+    0,
+  );
+};
+
 export const getVat = (totalPrice: number) => {
   return (20 / 100) * totalPrice;
 };

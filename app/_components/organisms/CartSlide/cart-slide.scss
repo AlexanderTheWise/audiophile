@@ -1,0 +1,10 @@
+.cart-slide {
+  top: 0;
+  right: var(--main-horizontal-space);
+  transform: translateY(-100%);
+  transition: transform, 0.5s;
+  &--open {
+    @extend .cart-slide;
+    transform: translateY(5.625rem + 1.5rem);
+  }
+}

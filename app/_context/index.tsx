@@ -1,6 +1,8 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import ProductCartProvider from "./ProductCart";
+import ModalProvider from "./Modal";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   const [initialState, setInitialState] = useState({});
@@ -12,9 +14,11 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <ProductCartProvider initalState={initialState}>
-      {children}
-    </ProductCartProvider>
+    <ModalProvider>
+      <ProductCartProvider initalState={initialState}>
+        {children}
+      </ProductCartProvider>
+    </ModalProvider>
   );
 };
 
