@@ -12,4 +12,8 @@
     @extend .categories-slide;
     transform: translateY(5.625rem);
   }
+
+  @media (width >= 768px) {
+    display: none;
+  }
 }
