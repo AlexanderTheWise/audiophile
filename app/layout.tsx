@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import { Footer, Header } from "@/_components/organisms";
 import Providers from "./_context";
 import "./styles/index.scss";
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.png",
+  },
+};
 
 export default function RootLayout({
   children,

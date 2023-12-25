@@ -14,11 +14,9 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <ModalProvider>
-      <ProductCartProvider initalState={initialState}>
-        {children}
-      </ProductCartProvider>
-    </ModalProvider>
+    <ProductCartProvider initalState={initialState}>
+      <ModalProvider>{children}</ModalProvider>
+    </ProductCartProvider>
   );
 };
 
