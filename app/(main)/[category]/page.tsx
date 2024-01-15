@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { CategoryTemp } from "@/_components/templates";
 import { getProductsByCategory } from "@/lib/products";
 
@@ -8,6 +9,14 @@ export const generateStaticParams = async () => [
   { category: "speakers" },
   { category: "earphones" },
 ];
+
+export const generateMetadata = async ({
+  params: { category },
+}: CategoryProps): Promise<Metadata> => {
+  return {
+    title: category.charAt(0).toUpperCase() + category.slice(1),
+  };
+};
 
 const Category = ({ params: { category } }: CategoryProps) => {
   const products = getProductsByCategory(category);
