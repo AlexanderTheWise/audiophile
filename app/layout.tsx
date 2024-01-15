@@ -5,8 +5,9 @@ import "./styles/index.scss";
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/favicon.png",
+    icon: "/images/icon.png",
   },
+  title: "Audiophile E-commerce",
 };
 
 export default function RootLayout({
